@@ -24,7 +24,7 @@ contract TokenERC20 {
     event Burnt (address index from, uint256 value);
 
     /**
-     * Constructor function.
+     * @dev Constructor function.
      * 
      * Initialises contract with some initial supply of tokens in the creators account.
      */
@@ -39,7 +39,7 @@ contract TokenERC20 {
     }
 
     /**
-     * Internal transfer, only called by this contract.
+     * @notice Internal transfer, only called by this contract.
      */
     function _transfer (address _from, address _to, uint _value) internal {
         // Prevent transfer to 0x0 address. Use burn() instead.
@@ -60,7 +60,7 @@ contract TokenERC20 {
     }
 
     /**
-     * Transfer tokens.
+     * @notice Transfer tokens.
      *
      * Send `_value` tokens to `_to` from sender's account.
      * @param _to The recepient's address.
